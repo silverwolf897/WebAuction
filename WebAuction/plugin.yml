@@ -1,0 +1,73 @@
+name: WebAuction
+main: me.exote.webauction.WebAuction
+version: 0.3
+author: Exote
+depend: [Spout]
+commands:
+  wa:
+    description: WebAuction
+    usage: help file on it's way
+permissions:
+    wa.*:
+        description: Gives access to all WebAuction commands
+        children:
+            wa.use.withdraw.items: true
+            wa.use.withdraw.money: true
+            wa.use.deposit.items: true
+            wa.use.deposit.money: true
+            wa.create.sign.deposit: true
+            wa.create.sign.withdraw: true
+            wa.create.sign.mailbox: true
+            wa.create.sign.recent: true
+            wa.create.sign.shout: true
+            wa.create.chest.deposit: true
+            wa.remove.chest.deposit: true
+            wa.remove: true
+            wa.webadmin: true
+    wa.use.*:
+        description: Gives access to all WebAuction commands
+        children:
+            wa.use.withdraw.items: true
+            wa.use.withdraw.money: true
+            wa.use.deposit.items: true
+            wa.use.deposit.money: true
+    wa.use.withdraw.items:
+        description: Lets you use the mailbox
+        default: true
+    wa.use.withdraw.money:
+        description: Lets you withdraw money from web account
+        default: true
+    wa.use.deposit.items:
+        description: Lets you deposit items and send them to web account
+        default: true
+    wa.use.deposit.money:
+        description: Lets you deposit money to web account
+        default: true
+    wa.create.sign.deposit:
+        description: Lets you create money deposit points
+        default: op
+    wa.create.sign.withdraw:
+        description: Lets you create money withdraw points
+        default: op
+    wa.create.sign.recent:
+        description: Lets you create a sign to display recent auctions created
+        default: op
+    wa.create.sign.shout:
+        description: Lets you create a sign to shout to all players nearby when a new auction is made
+        default: op
+    wa.create.sign.mailbox:
+        description: Lets you create mailboxes
+        default: op
+    wa.create.chest.deposit:
+        description: Lets you create item deposit chests
+        default: op
+    wa.remove.chest.deposit:
+        description: Lets you remove item deposit chests
+        default: op
+    wa.remove:
+        description: Lets you remove signs
+        default: op
+
+    wa.webadmin:
+        description: Lets you change other peoples data via website
+        default: op
